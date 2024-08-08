@@ -1,0 +1,22 @@
+projection implementation in class zm_bp_customeraimsm unique;
+strict ( 2 );
+
+define behavior for ZM_C_CustomerAIMSM alias Customer
+{
+  //use create;
+  use update;
+  //use delete;
+  use association _CustomerShipPoint { create; }
+
+}
+
+define behavior for ZM_C_CustomerShipPointM alias CustomerShippingPoint
+{
+  use update;
+  use delete;
+
+  use association _CustomerAIMS {  }
+
+//  use action setDefaults;
+
+}

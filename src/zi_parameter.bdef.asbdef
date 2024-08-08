@@ -1,0 +1,13 @@
+abstract;
+strict ( 2 );
+
+define behavior for zi_parameter //alias <alias_name>
+{
+
+//    field ( suppress )
+//  Customer, SalesOrganization, DistributionChannel, Division;   //Key Fields
+
+//    field ( suppress )
+//    ShippingPoint;
+
+}

@@ -1,0 +1,5 @@
+CLASS zm_bp_customeraimsm DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zm_c_customeraimsm.
+ENDCLASS.
+
+CLASS zm_bp_customeraimsm IMPLEMENTATION.
+ENDCLASS.

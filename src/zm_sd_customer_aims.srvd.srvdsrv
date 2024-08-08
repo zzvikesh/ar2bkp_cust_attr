@@ -1,0 +1,8 @@
+@EndUserText.label: 'Manage Customer (AIMS)'
+define service ZM_SD_CUSTOMER_AIMS {
+  expose ZM_C_CustomerAIMSM as Customer;
+  expose ZM_C_CustomerShipPointM as CustomerShippingPoint;
+  expose ZM_I_DomainVH as DomainValueHelp;
+  expose ZM_I_CustomerContactCard as CustomerCard;
+  expose ZM_I_BarcodeIndVH as BarcodeIndicatorVH;
+}

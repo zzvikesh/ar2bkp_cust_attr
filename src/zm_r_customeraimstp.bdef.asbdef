@@ -1,0 +1,28 @@
+managed implementation in class Zm_bp_customeraimstp unique;
+strict ( 2 );
+
+define behavior for ZM_R_CustomerAIMSTP //alias <alias_name>
+persistent table ZTOTC_CUSTOMER
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  association _CustomerShipPoint { create; }
+
+
+}
+
+define behavior for ZM_R_CustomerShipPointTP //alias <alias_name>
+persistent table ZTOTC_CUSTSHPT
+lock dependent by _CustomerAIMS
+authorization dependent by _CustomerAIMS
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Customer, SalesOrganization, DistributionChannel, Division;
+  association _CustomerAIMS;
+}
